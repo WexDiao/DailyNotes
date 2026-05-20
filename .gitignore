@@ -1,0 +1,6 @@
+*
+!Daily_Notes/
+!Daily_Notes/**
+!scripts/
+!scripts/**
+!.gitignore
