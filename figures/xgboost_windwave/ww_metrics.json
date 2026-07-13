@@ -1,0 +1,18 @@
+{
+  "station": "NDBC 46028 Cape San Martin (offshore Morro Bay, CA FOWT lease area)",
+  "task": "preliminary: predict Hs from wind (wind speed/gust/dir), pressure, month",
+  "n_raw": 104059,
+  "n_clean": 34030,
+  "years": "2024-2025",
+  "R2": 0.664,
+  "RMSE_m": 0.508,
+  "top_feature": "month",
+  "importances": {
+    "WSPD": 0.122,
+    "GST": 0.285,
+    "WDIR": 0.093,
+    "PRES": 0.118,
+    "month": 0.381
+  },
+  "note": "wind explains part of Hs; remaining scatter is swell from distant storms"
+}

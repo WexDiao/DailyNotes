@@ -1,0 +1,22 @@
+{
+  "dataset": "Kaggle Wind Turbine SCADA T1.csv (real public data)",
+  "n_total": 50473,
+  "n_train": 37854,
+  "n_test": 12619,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "n_estimators": 600,
+    "subsample": 0.8
+  },
+  "R2": 0.964,
+  "RMSE_kW": 249.8,
+  "top_feature": "wind_speed",
+  "importances": {
+    "wind_speed": 0.9085,
+    "wind_dir": 0.0351,
+    "hour": 0.0201,
+    "month": 0.0362
+  },
+  "physics_recovered": "S-shaped power curve vs wind speed; direction ~flat (yaw control)"
+}

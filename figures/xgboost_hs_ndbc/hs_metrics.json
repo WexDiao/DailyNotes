@@ -1,0 +1,26 @@
+{
+  "station": "NDBC 46268 Santa Monica, CA (wave + ADCP, no wind)",
+  "task": "predict Hs (WVHT) from wave period/dir + current + temps",
+  "n_rows": 12724,
+  "years": "2024-2025",
+  "best_params": {
+    "learning_rate": 0.06,
+    "max_depth": 6,
+    "n_estimators": 700,
+    "subsample": 0.8
+  },
+  "R2": 0.7647,
+  "RMSE_m": 0.138,
+  "top_feature": "DPD",
+  "importances": {
+    "DPD": 0.263,
+    "APD": 0.074,
+    "MWD": 0.072,
+    "WTMP": 0.089,
+    "ATMP": 0.06,
+    "cur_spd": 0.175,
+    "cur_dir": 0.069,
+    "hour": 0.052,
+    "month": 0.147
+  }
+}

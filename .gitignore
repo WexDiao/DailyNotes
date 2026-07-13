@@ -18,11 +18,6 @@ build/
 venv/
 ENV/
 
-# OrcaFlex / data (too large for GitHub)
-*.sim
-*.dat
-*.yml.bak
-
 # Secrets
 ANTHROPIC_API_KEY
 *.key
@@ -34,9 +29,45 @@ ANTHROPIC_API_KEY
 .DS_Store
 Thumbs.db
 
-# Local-only assets — everything under _local/ is gitignored
-# (literature PDFs, raw CSVs, OrcaFlex outputs, anything too large or private)
+# ─────────────────────────────────────────────────────────────
+# Safety net — content that must NEVER be committed, wherever it
+# sits in the tree. The intended home for all of this is _local/.
+# This backs up the _local/ convention: even a literature PDF,
+# raw dataset, or photo dropped straight into code/ or figures/
+# by mistake will be ignored automatically.
+# ─────────────────────────────────────────────────────────────
+
+# Literature PDFs
+*.pdf
+
+# Raw / large data
+*.csv
+*.tsv
+*.txt
+*.sim
+*.dat
+*.yml.bak
+*.gz
+*.zip
+*.7z
+*.nc
+*.h5
+*.parquet
+
+# Photos (whiteboard / camera snaps — may contain faces or handwriting)
+*.jpg
+*.jpeg
+
+# Keep a few legitimate text files that match the patterns above
+!requirements.txt
+!**/requirements.txt
+!LICENSE.txt
+
+# ─────────────────────────────────────────────────────────────
+# _local/ — everything here is local-only and gitignored
+#   (literature PDFs, raw CSV/txt, OrcaFlex outputs, anything private/large)
 # Exceptions: a README per subdir + .gitkeep so empty subdirs survive
+# ─────────────────────────────────────────────────────────────
 /_local/**
 !/_local/data/
 !/_local/data/README.md
